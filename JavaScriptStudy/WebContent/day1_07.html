@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //한번에 초기화
+        // var a = null
+        // var b = null,
+        // var c = null,
+        // var d = null;
+
+        var values = {
+            name : '전진영',
+            age : '10',
+            isMember : true
+        };
+
+        a(values);
+
+        function a(p) {
+            console.log('a',p);
+            b(p);
+        }
+
+        function b(p) {
+            console.log('b',p);
+
+            delete p.isMember;
+            c(p);
+        }
+
+        function c(p) {
+            console.log('c',p);
+        }
+    </script>
+</body>
+</html>

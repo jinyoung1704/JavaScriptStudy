@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="flag">
+    <input type="button" value="상수 값 변경" onclick="variableScope(document.getElementById('flag').value)">
+    <script>
+        //const global = "global";
+        var t = '값 변경 전';
+        //const t = '값 변경 전'; //상수 이기때문에 에러가 남
+
+        variableScope = function(value){
+            t = value;
+            alert("값?"+t);
+        }
+
+        console.log(t);
+        variableScope(1);
+    </script>
+</body>
+</html>

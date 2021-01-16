@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="example1"></div>
+    <div id="example2"></div>
+    <div id="example3"></div>
+    <div id="example4"></div>
+    <div id="example5"></div>
+    <script>
+        
+        var example=(1 == 1);
+        document.getElementById("example1").innerHTML = "(1 == 1) ,값 : "+example + ", typeof : "+ typeof(example);
+       //값만 확인할 때
+        var example=(1 == "1");
+        document.getElementById("example2").innerHTML = "(1 == '1') ,값 : "+example + ", typeof : "+ typeof(example);
+         //형변환이 이루어져 값만 비교 함.
+        var example=(1 == "2");
+        document.getElementById("example3").innerHTML = "(1 == '2') ,값 : "+example + ", typeof : "+ typeof(example);
+        //형변환이 이루어져 연산을 하지만 값이 다르기 때문에 false
+        var example=(1 === "2");
+        document.getElementById("example4").innerHTML = "(1 === '2') ,값 : "+example + ", typeof : "+ typeof(example);
+        //데이터 형까지 비교 값도 틀리고 데이터 형도 틀리기 때문에 false
+        var example=("2" === "2");
+        document.getElementById("example5").innerHTML = "('2' === '2') ,값 : "+example + ", typeof : "+ typeof(example);
+        //데이터 형까지 비교 값도 같고 데이터 형도 같기 때문에 true
+    </script>
+</body>
+</html>
