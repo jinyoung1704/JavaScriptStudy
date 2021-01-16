@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box">
+			<img src = "images/sale.png" alt="sale">
+			<div class="content">
+				
+				<div class="price">
+					<label for="inputprice">아이디 저장
+					<input type="text" id="inputprice" title="원래 가격">원</label>
+				</div>
+				<div class="discount">
+					<label for="discountprice">할인율 
+					<input type="text" id="discountprice" title="할인율">%</label>
+				</div>
+				
+				<div class="confirm">
+					<button type="button" onclick="resultPrice(inputprice)">할인가격 계산하기</button>
+				</div>
+			</div> <!--content  -->
+		</div>
+		
+		<div id="result"></div>
+	</div>
+	
+	<script type="text/javascript">
+	
+		function resultPrice()
+		{
+			var original = document.getElementById("inputprice").value;
+			var dis = document.getElementById("discountprice").value;
+			
+			document.getElementById("result").innerHTML = "상품의 원래 가격은 " + original +"원이고, 할인율은 "
+			+ dis +"%입니다." + (original*(dis/100)) + "을 절약한 " + (original-(original*(dis/100))) +"에 구매할 수 있습니다.";
+		}
+	</script>
+</body>
+</html>
