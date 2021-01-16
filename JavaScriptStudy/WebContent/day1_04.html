@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="flag">
+<input type="button" value="변수 값 확인" onclick="variableScope(document.getElementById('flag').value)">
+    <script>
+        var global = "global";
+
+        function variableScope(flag){
+            var funcVar = "뭘까?";
+
+            if(flag=="true")
+            {
+                var x = 5; //함수 안에서는 계속 살아있음 java static과 유사
+                //let 은 for문이나 if문 사용시 해당 문맥이 끝나면 변수들이 사라짐
+                //var element = (function(val){return i;})(i);  let을 사용할 수 없을 때 이런식으로
+                //let element = i;
+                window.alert("1.var global 값 확인 :" + global+", var x 값 확인 : " + x +", var funcVar 값 확인 : " +funcVar);
+            }
+            if(flag=="false")
+            {
+                window.alert("2.var global 값 확인 :" + global+", var x 값 확인 : " + x +", var funcVar 값 확인 : " +funcVar);
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

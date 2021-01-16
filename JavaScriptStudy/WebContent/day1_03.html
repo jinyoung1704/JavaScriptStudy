@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="example"></div>
+    <div id="example2"></div>
+    <br><br>
+    <div id="example3"></div>
+    <div id="example4"></div>
+    <br><br>
+    <div id="example5"></div>
+    <div id="example6"></div>
+
+<script>
+    var answer = 42; //"" 감싸지 않았기 때문에 Number 타입으로 인식
+
+    document.getElementById("example").innerHTML ="("+answer+")"+" 는"+typeof(answer+" 형 입니다."); //HTML Dom 객체를 이용하여 결과
+
+    answer = "심심한날 친구가 필요한 날";
+
+    document.getElementById("example2").innerHTML = "("+answer+")"+" 은"+typeof(answer)+" 형 입니다.";
+
+    "37" -7 //returns 30
+    "37" +7 //returns "377"
+
+    //======================
+
+    var x,y;
+    x = "심심한날 친구가 필요한날" + 42; //반환값
+    y = 42 +" 심심한날 친구가 필요한날"; //반환값 "42 "
+
+    document.getElementById("example3").innerHTML = "x = '심심한날 친구가 필요한날' +42 : ("+x +")"+"은 " +typeof(x)+" 형입니다.";
+    document.getElementById("example4").innerHTML = "y = 42+ '심심한날 친구가 필요한날' : ("+y +")"+"은 " +typeof(y)+" 형입니다.";
+
+    //====================
+
+    var n = "37"; //문자열
+    var s = 7; //숫자열
+
+    /***
+     
+        문자 뒤에 숫자 혹은 숫자 뒤에 문자를 +연산자로 연결하면 문자열로 인식
+        하지만 - 연산자로 연결하면 자동 형변환이 이루어져 계산이 이루어짐
+     ***/
+
+     document.getElementById("example5").innerHTML = "n + s : (" +(n+s) + ")"+" 은"+typeof(n+s)+ "형 입니다."; //+는 문자열로 변환되게 하지만
+     document.getElementById("example6").innerHTML = "n - s : (" +(n-s) + ")"+" 은"+typeof(n-s)+ "형 입니다."; //-는 숫자에서만 쓰임
+</script>
+</body>
+</html>
