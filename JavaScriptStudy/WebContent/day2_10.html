@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //history.back(-1); //인자값을 넣을 수 있다.
+        //location.href...와 같은 역할
+
+        //location 정보
+        document.write("현재문서의 url 주소 : " + location.href+"<br>");
+        document.write("포트 번호 : " + location.port+"<br>");
+        document.write("url 주소의 호스트 이름과 포트 번호 : " + location.host+"<br>");
+        document.write("url 도메인 반환 : "+ location.hostname+"<br>");
+        document.write("프로토콜 종류 : " + location.protocol+"<br>");
+        document.write("url 경로 반환 : "+location.pathname+"<br>");
+        document.write("url에 붙은 매개변수 반환 : " + location.search+"<br>");
+        document.write("주소 값에 붙어 있는 anchor값을 반환 : " + location.hash+"<br>");
+
+        function reload() {
+                location.reload(); //현재페이지 새로고침
+        };
+
+        function replace() {
+            location.replace("http://www.naver.com");//현재페이지 url변경
+        };
+
+        function assign() {
+            location.assign("http://www.daum.com"); //현재페이지 url변경
+        };
+
+    </script>
+    <br>
+    <br>
+    <input type="button" onclick="reload()" value="새로고침">
+    <input type="button" onclick="replace()" value="현재 페이지 url 변경">
+    <input type="button" onclick="assign()" value="새로운 주소로 이동">
+
+    <!--
+    <input type="button" onclick="javascript:history.back(-1);" value="history.go()"/>
+    <input type="button" onclick="javascript:history.forward(-1);" value="history.forward()"/>
+    <input type="button" onclick="javascript:history.go(-1);" value="history.back(-1)"/>
+    -->
+</body>
+</html>
