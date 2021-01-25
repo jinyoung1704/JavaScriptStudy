@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .on{
+            background-color: yellow;
+            border: 1px solid gray;
+        }
+    
+        .off{
+            background-color: white;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li class="off">홀수1</li>
+    <li class="off">짝수2</li>
+    <li class="off">홀수3</li>
+    <li class="off">짝수4</li>
+    <li class="off">홀수5</li>
+    <li class="off">짝수6</li>
+
+</ul>
+<br>
+<script>
+    var li = document.getElementsByTagName("li");
+    var length = li.length;
+    for(var i=0;i<length;i++)
+    {
+        let liElement = li[i]; // 이런게 튜닝
+        liElement.className="on";
+        if(i==0)
+        {
+            //li[0].style.cssText="color:blue;font-size:32pt";
+            liElement.style.cssText="color:blue;font-size:32pt";
+            //liElement.style.color='blue';
+        }
+
+        /*
+        if((i+1)%2==0)
+        {
+            li[i].className="on";
+        }*/
+    }        
+ </script>
+</body>
+</html>

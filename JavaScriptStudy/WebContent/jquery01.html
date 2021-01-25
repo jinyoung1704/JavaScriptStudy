@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selector</title>
+    <style>
+        body{background-color: #ebebeb;font-family: Dotum}
+        div,span{width: 120px;height:40px;float: left;padding: 10px;margin:10px;background-color: #ffffff}
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function () {
+            //sapn 태그를 찾아 출력
+            alert($("span").html());
+        })
+    </script>
+</head>
+<body style="padding: 10px;">
+    <h2>jQuery 시작 Selector</h2>
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com을 방문하세요</p>
+    <div>DOM1</div><span>DOM2</span>
+    <!--
+        이렇게 튜닝해서도 많이 씀
+        이렇게 하면 ready 필요없이 DOM 을 한줄 한줄 읽으면서 오기 때문에 오류 안남
+    <script type="text/javascript">
+             alert($("span").html());
+     </script>
+     -->
+</body>
+</html>
